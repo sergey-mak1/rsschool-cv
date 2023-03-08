@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kalam', cursive;
+    font-size: 24px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: radial-gradient(circle at top right, #2F4F4F, #696969, #ffffff);
+}
+
+.header {
+    width: 100%;
+    max-width: 1440px;
+    min-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    background: linear-gradient(to right, #000000, #696969);
+}
+
+.nav {
+    width: 70%;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    font-size: 25px;
+    margin: 20px auto;
+    padding: 0;
+}
+
+.nav-item {
+    white-space: nowrap;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 3px;
+    width: 0;
+    background: #ffffff;
+    transition: width 0.5s, left 0.5s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+    transition: width 0.5s, left 0.5s;
+}
+
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1440px;
+    min-width: 680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section-profile {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    border-bottom: 10px solid #2F4F4F;
+    margin-bottom: 30px;
+}
+
+.profile-photo {
+    width: 200px;
+    border-radius: 50%;
+    transition: 0.7s;
+}
+
+.profile-photo:hover {
+    box-shadow: 0 0 30px;
+    transition: 0.7s;
+}
+
+.profile-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-title {
+    font-size: 40px;
+    margin: 0;
+    position: relative;
+}
+
+.profile-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    height: 3px;
+    width: 50%;
+    background-color: #000000;
+    transition: width 0.5s, left 0.5s;
+}
+
+.profile-title:hover::after {
+    width: 80%;
+    left: 10%;
+}
+
+.profile-subtitle {
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+}
+
+.section {
+    width: 45%;
+    border-bottom: 2px solid #2F4F4F;
+    margin: 20px 25px;
+}
+
+
+.section-title {
+    position: relative;
+    display: inline;
+    transition: width 0.7s, left 0.7s;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: #2F4F4F;
+    transition: width 0.7s, left 0.7s;
+}
+
+.section:hover .section-title::after {
+    width: 100%;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.contacts-link,
+.project-link {
+    text-decoration: none;
+    color: #000000;
+    transition: 0.7s;
+}
+
+.contacts-link:hover,
+.project-link:hover {
+    color: #FFD700;
+    transition: 0.7s;
+}
+
+.text-code {
+    font-size: 15px;
+}
+
+.section-code {
+    width: 90%;
+    border: none;
+}
+
+.footer {
+    width: 100%;
+    max-width: 1440px;
+    min-width: 680px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px 25px;
+    display: flex;
+    background: linear-gradient(to left, #000000, #000000, #696969);
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.footer-logo {
+    fill: #ffffff;
+    transform: rotate(-25deg);
+    transition: 0.7s;
+}
+
+.footer-logo:hover {
+    fill: #000000;
+    transition: 0.7s;
+    transform: rotate(0);
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+}
+
+.footer-link::before {
+    position: absolute;
+    content: url(assets/git-logo.svg);
+    background-color: #ffffff;
+    bottom: 0;
+    left: -30px;
+    height: 25px;
+    width: 25px;
+}
+
+
+.footer-link:hover {
+    color: #FFD700;
+}
+
+.footer-link:hover::before {
+    background-color: #FFD700;
+}
+
+@media (max-width: 1020px) {
+    .nav {
+        width: 100%;
+    }
+
+    .nav-list {
+        font-size: 15px;
+    }
+
+    .section {
+        width: 100%;
+    }
+}
